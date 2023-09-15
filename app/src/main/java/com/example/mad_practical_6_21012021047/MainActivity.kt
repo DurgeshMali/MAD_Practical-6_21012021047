@@ -4,23 +4,25 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.Button
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        var playpause_button = findViewById<View>(R.id.play_pause_button)
-        playpause_button.setOnClickListener {
-            intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
+        var play_pause:Button = findViewById(R.id.play_pause_button);
+
+        var stop_Button:Button = findViewById(R.id.stop_button);
+
+        play_pause.setOnClickListener {
+            playpause();
         }
 
-        var stop_Button = findViewById<View>(R.id.stop_button)
-        stop_Button.setOnClickListener() {
-            intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
+        stop_Button.setOnClickListener {
+            stop();
         }
+
     }
 
     fun playpause() {
