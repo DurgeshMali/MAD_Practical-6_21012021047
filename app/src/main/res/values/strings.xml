@@ -1,4 +1,4 @@
 <resources>
     <string name="app_name">MAD_Practical-6_21012021047</string>
-    <string name="stop_button" />
+    <string name="stop_button" >stop</string>
 </resources>
