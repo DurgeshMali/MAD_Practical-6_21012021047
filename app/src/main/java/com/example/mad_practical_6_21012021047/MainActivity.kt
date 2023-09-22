@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() {
 
     fun stop() {
         Intent(applicationContext,MyService::class.java).putExtra(MyService.PLAYERKEY,MyService.PLAYERVALUE).apply {
-            startService(this)
+            stopService(this)
         }
     }
 }
